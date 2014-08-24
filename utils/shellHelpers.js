@@ -135,7 +135,7 @@ function commandModuleLoadingFunctions(shell) {
     // Register multiple command modules at once.
     shell.registerCmds = function (cmds) {
         for (var cmdName in cmds) {
-            if (!cmds.hasOwnProperty(cmdName)) return;
+            if (!cmds.hasOwnProperty(cmdName)) continue;
             shell.registerCmd(cmdName, cmds[cmdName]);
         }
     };
